@@ -5,14 +5,14 @@ import { RGBELoader} from 'three/examples/jsm/loaders/RGBELoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 // import { EffectComposer} from 'three/examples/jsm/effects/EffectComposer'
 import * as core from '@theatre/core';
-import studio from '@theatre/studio'
+// import studio from '@theatre/studio'
 import { types, getProject, val } from '@theatre/core';
 import AnimationState from './animationfile/hanging garden.theatre-project-state(1).json'
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#87CEEB");
-studio.initialize()
+// studio.initialize()
 const project = getProject("hanging garden" , { state: AnimationState });
 const sheet = project.sheet("Establishing Shot");
 
@@ -40,9 +40,9 @@ window.addEventListener("scroll", handleScroll);
 
 
 
-document.querySelector(".glowbutton").addEventListener("click" , ()=>{
-  project.ready.then(() => sheet.sequence.play({ iterationCount: Infinity }))
-})
+// document.querySelector(".glowbutton").addEventListener("click" , ()=>{
+//   project.ready.then(() => sheet.sequence.play({ iterationCount: Infinity }))
+// })
 
 
 
